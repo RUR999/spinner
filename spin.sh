@@ -15,6 +15,6 @@ spin() {
     sleep 0.20
     done
    	done
-   	echo -en "${c} [ ${g}Done ${c}]${n}"
+   	echo -en "${c} [ ${g}Done ${c}]\n${n}"
     tput cnorm
 }
