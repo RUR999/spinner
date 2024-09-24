@@ -17,7 +17,7 @@ spin() {
     done
    	done
     tput rc;tput el
-   	echo -en "\r\033[K${c} [ ${g}Done ${c}]\n${n}"
+   	echo -en "\r\033[K${c} [ ${g}Done ${c}]${n}"
     sleep 2
     tput rc;tput el
     tput cnorm
