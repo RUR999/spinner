@@ -6,21 +6,18 @@ b="\033[1;34m"
 n="\033[0m"
 
 spin() {
-    echo -e ""
-    echo -e ""
+    echo ""
     pid=$!
     tput civis
     spinner=( "█▒▒▒▒▒▒ lOADING ▒▒▒▒▒▒█" "▒█▒▒▒▒▒ LoADING ▒▒▒▒▒█▒" "▒▒█▒▒▒▒ LOaDING ▒▒▒▒█▒▒" "▒▒▒█▒▒▒ LOAdING ▒▒▒█▒▒▒" "▒▒▒▒█▒▒ LOADiNG ▒▒█▒▒▒▒" "▒▒▒▒▒█▒ LOADInG ▒█▒▒▒▒▒" "▒▒▒▒▒▒█ LOADINg █▒▒▒▒▒▒" "▒▒▒▒▒█▒ LOADInG ▒█▒▒▒▒▒" "▒▒▒▒█▒▒ LOADiNG ▒▒█▒▒▒▒" "▒▒▒█▒▒▒ LOAdING ▒▒▒█▒▒▒" "▒▒█▒▒▒▒ LOaDING ▒▒▒▒█▒▒" "▒█▒▒▒▒▒ LoADING ▒▒▒▒▒█▒" )
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
     for s in "${spinner[@]}";do
     tput sc
+    echo ""
     echo -en "\r${c}[ ${g}${s}${c} ]${n}\r"
     sleep 0.20
     done
    	done
-    tput el
-   	echo -en "${c} [ ${g}Done ${c}]${n}"
-    sleep 2
     tput el
     tput rc
     tput cnorm
