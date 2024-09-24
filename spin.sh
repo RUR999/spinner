@@ -11,10 +11,10 @@ spin() {
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
     for s in "${spinner[@]}";do
     tput civis
-    echo -ne "\r${c}[ ${g}${s}${c} ]\r"
+    echo -en "\r${c}[ ${g}${s}${c} ]\r${n}"
     sleep 0.20
     done
    	done
    	tput cnorm
-   	echo -e "\n[ Done ]${n}"
+   	echo -en "${c} [ ${g}Done ${c}]${n}"
 }
