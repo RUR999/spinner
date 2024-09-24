@@ -18,8 +18,6 @@ spin() {
     done
    	done
     tput rc;tput el
-   	echo -en "${c} [ ${g}Done ${c}]${n}"
-    sleep 2
-    tput rc;tput el
+   	echo -e "${c} [ ${g}Done ${c}]${n}"
     tput cnorm
 }
