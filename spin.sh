@@ -20,7 +20,8 @@ spin() {
     tput el
     tput rc
     tput sc
-   	echo -e "${c} [ ${g}Done ${c}]${n}"
+   	echo -en "${c} [ ${g}Done ${c}]${n}"
+    sleep 2
     tput el
     tput rc
 }
