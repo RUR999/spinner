@@ -12,7 +12,7 @@ spin() {
     while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
     for s in "${spinner[@]}";do
     tput sc
-    echo -en "\r${b}[${g}+${g}] ${c}[ ${g}${s}${c} ]${n}\r"
+    echo -en "\r${b}[${g}+${b}] ${c}[ ${g}${s}${c} ]${n}\r"
     sleep 0.20
     done
    	done
